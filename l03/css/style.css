@@ -1,0 +1,126 @@
+body {
+    font-family: sans-serif;
+    background: repeating-linear-gradient(
+    -45deg,
+    rgba(0, 0, 0, 0.06),
+    rgba(0,0,0,.03) 1px,
+    rgb(255, 255, 247) 1px,
+    rgb(255, 255, 247) 3px
+    );    
+  }
+  
+a:hover {
+    color: rgb(255, 18, 43);
+}
+
+a {
+      text-decoration: none;
+      color: white;
+}
+
+:not(ul) {
+    width: 800px;
+    margin:auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 3px;
+    padding-right: 3px;
+    position: fixed;
+    top: 0;
+    right: 10%;
+    background: rgb(0,0,0);
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+li {
+    display: inline;
+    color: white;
+}
+
+.aktuell {
+    color: rgb(255, 125, 18);
+}
+
+h1 {
+    color: rgb(255, 136, 0);
+    font-weight: bold;
+}
+
+p.titel,label {
+    color: rgb(224, 120, 0);
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.erklaerung{
+    color: rgba(85, 85, 85, 0.75);
+    font-weight: lighter;
+    text-align: right;
+}
+
+a.erklaerung{
+    color: rgba(85, 85, 85, 0.75);
+    font-weight: lighter;
+    text-align: right;
+    text-decoration: underline;
+}
+
+img.social{
+    width: 200px; 
+    height: 60px;
+}
+
+.mehrplatz{
+    margin-bottom: 5px;
+}
+
+.nachricht {
+    padding-bottom: 50px;
+}
+
+input {
+    width: 50%;
+    background: rgb(107, 107, 107);
+    border: none;
+    font-size: larger;
+}
+
+.button {
+    width: 20%;
+    color:white;
+}
+
+::placeholder {
+    color: white;
+}
+
+.header {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.ilogo {
+    position: relative;
+    bottom: 75px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+a.ilogoa:hover{
+    filter: saturate(100%);
+}
+
+a.ilogoa {
+    filter: saturate(50%);
+}
+
+img {
+    width: 800px;
+    margin: auto;
+}
