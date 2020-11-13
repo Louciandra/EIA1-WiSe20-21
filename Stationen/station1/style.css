@@ -1,0 +1,109 @@
+body{
+    font-family: sans-serif;
+    background-image: url("bg.png"); 
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+  
+li {
+    float: left;
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+  
+li a:hover {
+    background-color: #111;
+}
+
+li a.active{
+    background-color: #4CAF50;
+}
+
+.menu{
+    display: none;
+    position: fixed;
+    min-width: 1px;
+    z-index: 1;
+}
+
+.menu a {
+    color: black;
+    background-color: #4d4d4d;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.menu a:hover{
+    background-color: rgb(66, 66, 66);
+}
+
+.porto:hover .menu{
+    display: block;
+}
+
+.porto{
+    cursor: pointer;
+}
+
+#header {
+    position: absolute;
+}
+
+.karte {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+.pinguin {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+}
+
+.busch {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-30%, -33%);
+}
+
+.title {
+    position: absolute;
+    font-family: serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #FFFFFF;
+    width: 75%;
+    top: 20px;
+    left: 100px;
+}
+
+.kartentext {
+    position: absolute;
+    top: 0;
+    left: 100px;
+    color: #FFF;
+    width: 65%;
+    transform: translate(0%, 120%);
+}
