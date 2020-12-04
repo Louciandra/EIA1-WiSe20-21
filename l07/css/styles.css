@@ -26,15 +26,15 @@ html, body {
 }
 
 .ton{
-    background: linear-gradient(rgb(200, 160, 80),rgb(150,110,30));
+    background: linear-gradient(#c8a050,#966e1e);
 }
 
 .drums{
-    background: linear-gradient(rgb(80, 200, 160),rgb(30, 150, 110));
+    background: linear-gradient(#50c8a0,#1e966e);
 }
 
 .track{
-    background: linear-gradient(rgb(160, 80, 200),rgb(110, 30, 150));
+    background: linear-gradient(#a050c8,#6e1e96);
 }
 
 .drumpad img{
