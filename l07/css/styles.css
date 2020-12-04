@@ -1,0 +1,44 @@
+html, body {
+    font-family: sans-serif;
+    background-color: rgb(25,25,25);
+}
+
+.drumpad{
+    margin: 0;
+    position: absolute;
+    width: 465px;
+    height: 465px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(25,25,25);
+}
+
+.button{
+    position: relative;
+    display: inline-grid;
+    top: 0;
+    width: 150px;
+    height: 150px;
+    margin: 0.25%;
+    border-radius: 25px;
+    box-shadow: 5px 5px 2px;
+}
+
+.ton{
+    background: linear-gradient(rgb(200, 160, 80),rgb(150,110,30));
+}
+
+.drums{
+    background: linear-gradient(rgb(80, 200, 160),rgb(30, 150, 110));
+}
+
+.track{
+    background: linear-gradient(rgb(160, 80, 200),rgb(110, 30, 150));
+}
+
+.drumpad img{
+    position: relative;
+    margin-left: 50%;
+    transform: translate(-50%, 0%);
+}
