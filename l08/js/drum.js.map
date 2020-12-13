@@ -1,0 +1,8 @@
+{
+"version":3,
+"file":"script-min.js",
+"lineCount":1,
+"mappings":"AAAAA,QAASA,WAAU,CAACC,CAAD,CAAK,CAEpB,CADYC,IAAIC,KAAJD,CAAU,SAAVA,CAAsBD,CAAtBC,CAA2B,MAA3BA,CACZ,EAAME,IAAN,EAFoB,CAIxBC,QAASA,SAAQ,EAAG,CAChB,IAAIC,EAAO,8CAAA,CAAA,KAAA,CAAA,GAAA,CAAX,CACIC,EAAI,CAERC,YAAA,CAAY,QAAS,EAAG,CACpBR,UAAA,CAAWM,CAAA,CAAKC,CAAL,CAAX,CACAA,EAAA,EAFoB,CAAxB,CADeE,GACf,CAJgB;",
+"sources":["script.js"],
+"names":["playSample","id","sound","Audio","play","playBeat","beat","i","setInterval","interval"]
+}
