@@ -52,6 +52,7 @@ window.onload=function(){
     document.querySelector("#record").addEventListener("click", function(): void {
         recording = !recording;
     });
+    document.addEventListener('keypress', distribute);
 };
 
 function playSample(id:string){
@@ -87,5 +88,32 @@ function deleteBeat(){
 function recordBeat(sample){
     if(recording){
         beatArr.push(sample);
+    }
+}
+
+function distribute(key){
+    var drumpads = ["G","laugh-1", "laugh-2","A","C","F","hihat","kick","snare"];
+    switch(key.code){
+        case "Space":{
+            var button = document.querySelector("#playstop");
+            playBeat(button);
+            recording=false;
+            break;
+        }
+        case "KeyR": {
+            recording = !recording;
+            break;
+        }
+        
+        case "KeyD": {
+            deleteBeat();
+            recording=false;
+            break;
+        }
+    }
+
+    if (key.keyCode >= 49 && key.keyCode <= 57){
+        playSample(drumpads[key.keyCode-49]);
+        recordBeat(drumpads[key.keyCode-49]);
     }
 }
