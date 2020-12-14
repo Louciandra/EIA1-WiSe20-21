@@ -1,10 +1,10 @@
-var isplaying = false;
-var beatplayInt;
-var playerInt;
-var beatArr = ["kick","snare","kick","snare","kick","snare","hihat","hihat"];
-var recording = false;
+var isplaying: boolean = false;
+var beatplayInt: number;
+var playerInt: number;
+var beatArr: string[] = ["kick", "snare", "kick", "snare", "kick", "snare", "hihat", "hihat"];
+var recording: boolean = false;
 
-window.onload=function(){
+window.onload = function(): void {
     document.querySelector("#hihat").addEventListener("click", function(): void {
         playSample(this.id);
         recordBeat(this.id);
@@ -43,35 +43,35 @@ window.onload=function(){
     });
     document.querySelector("#playstop").addEventListener("click", function(): void {
         playBeat(this);
-        recording=false;
+        recording = false;
     });
     document.querySelector("#delete").addEventListener("click", function(): void {
         deleteBeat();
-        recording=false;
+        recording = false;
     });
     document.querySelector("#record").addEventListener("click", function(): void {
         recording = !recording;
     });
-    document.addEventListener('keypress', distribute);
+    document.addEventListener("keypress", distribute);
 };
 
-function playSample(id:string){
-    var sound:HTMLAudioElement = new Audio("sounds/"+id+'.mp3');
+function playSample(id: string): void {
+    var sound: HTMLAudioElement = new Audio("sounds/" + id + ".mp3");
     sound.play();
 }
 
-function playBeat(button){
-    var interval = 300;
-    if(!isplaying && beatArr.length > 0){
+function playBeat(button: Element): void {
+    var interval: number = 300;
+    if (!isplaying && beatArr.length > 0) {
         isplaying = true;
         button.className = "fas fa-stop";
-        beatplayInt = setInterval(function(){
-            var i = 0;
-            playerInt = setInterval(function(){
+        beatplayInt = setInterval(function(): void {
+            var i: number = 0;
+            playerInt = setInterval(function(): void {
                 playSample(beatArr[i]);
                 i++;
-            }, interval);
-        }, interval*beatArr.length);
+            },                      interval);
+        },                        interval * beatArr.length);
     } else {
         isplaying = false;
         button.className = "fas fa-play";
@@ -81,23 +81,23 @@ function playBeat(button){
     
 }
 
-function deleteBeat(){
+function deleteBeat(): void {
     beatArr = [];
 }
 
-function recordBeat(sample){
-    if(recording){
+function recordBeat(sample: string): void {
+    if (recording) {
         beatArr.push(sample);
     }
 }
 
-function distribute(key){
-    var drumpads = ["G","laugh-1", "laugh-2","A","C","F","hihat","kick","snare"];
-    switch(key.code){
-        case "Space":{
-            var button = document.querySelector("#playstop");
+function distribute(key: KeyboardEvent): void {
+    var drumpads: string[] = ["G", "laugh-1", "laugh-2", "A", "C", "F", "hihat", "kick", "snare"];
+    switch (key.code) {
+        case "Space": {
+            var button: Element = document.querySelector("#playstop");
             playBeat(button);
-            recording=false;
+            recording = false;
             break;
         }
         case "KeyR": {
@@ -107,13 +107,13 @@ function distribute(key){
         
         case "KeyD": {
             deleteBeat();
-            recording=false;
+            recording = false;
             break;
         }
     }
 
-    if (key.keyCode >= 49 && key.keyCode <= 57){
-        playSample(drumpads[key.keyCode-49]);
-        recordBeat(drumpads[key.keyCode-49]);
+    if (key.keyCode >= 49 && key.keyCode <= 57) {
+        playSample(drumpads[key.keyCode - 49]);
+        recordBeat(drumpads[key.keyCode - 49]);
     }
 }

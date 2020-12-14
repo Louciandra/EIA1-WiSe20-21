@@ -3,6 +3,10 @@ html, body {
     background-color: #191919;
 }
 
+p {
+    color: white;
+}
+
 .drumpad{
     margin: 0;
     position: absolute;

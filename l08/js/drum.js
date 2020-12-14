@@ -51,10 +51,10 @@ window.onload = function () {
     document.querySelector("#record").addEventListener("click", function () {
         recording = !recording;
     });
-    document.addEventListener('keypress', distribute);
+    document.addEventListener("keypress", distribute);
 };
 function playSample(id) {
-    var sound = new Audio("sounds/" + id + '.mp3');
+    var sound = new Audio("sounds/" + id + ".mp3");
     sound.play();
 }
 function playBeat(button) {
