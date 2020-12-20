@@ -1,0 +1,76 @@
+body {
+  background-color: #232323;
+  font-family: sans-serif;
+}
+
+.countP {
+  color: #ffffff;
+  text-align: center;
+  font-size: 52px;
+}
+
+.taskinput {
+  position: relative;
+  left: 25%;
+  width: 50%;
+  height: 50px;
+  border-radius: 10px;
+  font-size: x-large;
+  background-color: #fff;
+  color:#000;
+  margin-bottom: 5px;
+}
+
+.listenDiv {
+  position: relative;
+  width: 54%;
+  height: 70px;
+  border-radius: 10px;
+  font-size: x-large;
+  background-color: #2f2f2f;
+  margin: 0 auto 3px auto;
+  color: #c8c8c8;
+}
+.task-text {
+  position: absolute;
+  margin-left: 6px;
+  margin-top: 17px;
+  font-size: 30px;
+  display: inline;
+}
+
+.fa-square{
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 30px;
+  color: #e3dfe6;
+}
+
+.fa-square:hover {
+  opacity: 50%;
+  cursor: pointer;
+}
+
+.fa-check-square{
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 30px;
+  color: #e3dfe6;
+}
+.fa-check-square:hover {
+  opacity: 50%;
+  cursor: pointer;
+}
+.fa-trash{
+  position: absolute;
+  margin-top: 20px;
+  right: 5%;
+  font-size: 30px;
+  color: #fff;
+}
+.fa-trash:hover{
+  opacity: 50%;
+  cursor: pointer;
+}
