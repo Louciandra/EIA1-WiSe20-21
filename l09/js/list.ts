@@ -27,7 +27,7 @@ function distribute(key: KeyboardEvent): void {
         container.appendChild(deleteB);
     
         anzahl++;
-        counter();
+        update();
 
         doneB.addEventListener("click", function(): void {
             doneB.classList.toggle("fa-check-square");
@@ -37,12 +37,12 @@ function distribute(key: KeyboardEvent): void {
         deleteB.addEventListener("click", function(): void {
             document.body.removeChild(container);
             anzahl--;
-            counter();
+            update();
         });
     }
     
 }
 
-function counter(): void {
-    document.querySelector(".counter").innerHTML = "" + anzahl;
+function update(): void {
+    document.querySelector(".count").innerHTML = "" + anzahl;
 }

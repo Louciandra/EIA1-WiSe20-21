@@ -22,7 +22,7 @@ function distribute(key) {
         container_1.appendChild(text);
         container_1.appendChild(deleteB);
         anzahl++;
-        counter();
+        update();
         doneB_1.addEventListener("click", function () {
             doneB_1.classList.toggle("fa-check-square");
             doneB_1.classList.toggle("fa-square");
@@ -30,10 +30,10 @@ function distribute(key) {
         deleteB.addEventListener("click", function () {
             document.body.removeChild(container_1);
             anzahl--;
-            counter();
+            update();
         });
     }
 }
-function counter() {
-    document.querySelector(".counter").innerHTML = "" + anzahl;
+function update() {
+    document.querySelector(".count").innerHTML = "" + anzahl;
 }
